@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import './AdoptionForm.scss';
+import './adoptionform.scss';
 
 const AdoptionForm = ({ pet, onClose }) => {
   const [formData, setFormData] = useState({
