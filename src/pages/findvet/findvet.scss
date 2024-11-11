@@ -1,0 +1,159 @@
+// Custom variables
+$primary: #003049;
+$secondary: #669bbc;
+$light: #fdf0d5;
+$danger: #c1121f;
+$dark: #780000;
+
+.find-vet-container {
+  background-color: $light;
+  min-height: 100vh;
+  padding: 2rem 0;
+
+  h1 {
+    color: $primary;
+    & {
+    font-weight: 700;
+    }
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    color: $primary;
+    & {
+    font-weight: 600;
+    }
+  }
+
+  .card {
+    border: none;
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .vet-card {
+    border-left: 4px solid $secondary;
+  }
+
+  .btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+    
+    &:hover, &:focus {
+      background-color: darken($primary, 10%);
+      border-color: darken($primary, 10%);
+    }
+  }
+
+  .btn-outline-primary {
+    color: $primary;
+    border-color: $primary;
+
+    &:hover, &:focus {
+      background-color: $primary;
+      color: $light;
+    }
+  }
+
+  .form-control, .form-select {
+    border-radius: 0.25rem;
+
+    &:focus {
+      border-color: $secondary;
+      box-shadow: 0 0 0 0.2rem rgba($secondary, 0.25);
+    }
+  }
+
+  .alert-danger {
+    background-color: lighten($danger, 40%);
+    border-color: $danger;
+    color: $danger;
+    border-radius: 0.25rem;
+  }
+
+  .card-title {
+    color: $primary;
+    font-weight: 600;
+  }
+
+  .card-subtitle {
+    color: $secondary;
+  }
+
+  .text-muted {
+    color: $secondary !important;
+  }
+
+  .form-check-input:checked {
+    background-color: $primary;
+    border-color: $primary;
+  }
+
+  .form-label {
+    & {
+    font-weight: 500;
+    }
+    color: $primary;
+  }
+}
+
+// Dark mode styles
+@media (prefers-color-scheme: dark) {
+  .find-vet-container {
+    background-color: darken($dark, 5%);
+
+    h1, h2 {
+      color: $light;
+    }
+
+    .card {
+      background-color: $dark;
+      color: $light;
+    }
+
+    .btn-outline-primary {
+      color: $light;
+      border-color: $light;
+
+      &:hover, &:focus {
+        background-color: $light;
+        color: $dark;
+      }
+    }
+
+    .form-control, .form-select {
+      background-color: darken($dark, 5%);
+      color: $light;
+      border-color: $secondary;
+
+      &:focus {
+        background-color: $dark;
+      }
+    }
+
+    .card-title {
+      color: $light;
+    }
+
+    .card-subtitle {
+      color: $secondary;
+    }
+
+    .text-muted {
+      color: lighten($secondary, 20%) !important;
+    }
+
+    .form-label {
+      color: $light;
+    }
+
+    .form-check-label {
+      color: $light;
+    }
+  }
+}

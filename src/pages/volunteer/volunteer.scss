@@ -1,0 +1,208 @@
+// Custom variables
+$primary: #003049;
+$secondary: #669bbc;
+$light: #fdf0d5;
+$danger: #c1121f;
+$dark: #780000;
+
+.volunteer-container {
+  background-color: $light;
+  min-height: 100vh;
+  
+  h1 {
+    color: $primary;
+    & {
+    font-weight: 700;
+    }
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $dark;
+    font-size: 1.1rem;
+  }
+
+  .volunteer-image {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-header {
+      background-color: $primary;
+      color: $light;
+      & {
+      font-weight: 600;
+      }
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+  }
+
+  .opportunity-card {
+    height: 100%;
+
+    .list-group-item {
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lighten($secondary, 30%);
+      }
+
+      svg {
+        color: $secondary;
+      }
+    }
+  }
+
+  .application-card {
+    .form-label {
+      color: $primary;
+      & {
+      font-weight: 600;
+      }
+    }
+
+    .form-control, .form-select {
+      border-color: $secondary;
+      &:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+      }
+    }
+
+    .btn-primary {
+      background-color: $primary;
+      border-color: $primary;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
+    }
+  }
+
+  .alert-success {
+    background-color: lighten($secondary, 30%);
+    border-color: $secondary;
+    color: $primary;
+  }
+}
+
+.modal {
+  .modal-content {
+    border-radius: 15px;
+    border: none;
+  }
+
+  .modal-header {
+    background-color: $primary;
+    color: $light;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    .close {
+      color: $light;
+    }
+  }
+
+  .modal-body {
+    color: $dark;
+  }
+
+  .modal-footer {
+    border-top: none;
+
+    .btn-secondary {
+      background-color: $secondary;
+      border-color: $secondary;
+      &:hover {
+        background-color: darken($secondary, 10%);
+      }
+    }
+
+    .btn-primary {
+      background-color: $primary;
+      border-color: $primary;
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .volunteer-container {
+    background-color: darken($dark, 5%);
+
+    h1, p {
+      color: $light;
+    }
+
+    .card {
+      background-color: lighten($dark, 10%);
+      
+      .card-header {
+        background-color: $primary;
+      }
+    }
+
+    .opportunity-card {
+      .list-group-item {
+        background-color: lighten($dark, 15%);
+        color: $light;
+
+        &:hover {
+          background-color: lighten($dark, 20%);
+        }
+      }
+    }
+
+    .application-card {
+      .form-label {
+        color: $light;
+      }
+
+      .form-control, .form-select {
+        background-color: lighten($dark, 5%);
+        color: $light;
+        border-color: $secondary;
+
+        &:focus {
+          background-color: $dark;
+        }
+      }
+    }
+
+    .alert-success {
+      background-color: darken($secondary, 30%);
+      color: $light;
+    }
+  }
+
+  .modal {
+    .modal-content {
+      background-color: lighten($dark, 10%);
+    }
+
+    .modal-body {
+      color: $light;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+$dark-red: #780000;
+$bright-red: #C1121F;
+$cream: #FDF0D5;
+$dark-blue: #003049;
+$light-blue: #669BBC;
+
+.adoption-form {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      color: $dark-red;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+
+      h3 {
+        color: $dark-blue;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid $cream;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      background-color: #f9f9f9;
+
+      &:focus {
+        outline: none;
+        border-color: #4a90e2;
+        background-color: #fff;
+      }
+    }
+
+    textarea {
+      min-height: 90px;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      input[type="checkbox"] {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .submit-button {
+      background-color: $light-blue;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+
+      &:hover {
+        background-color: $dark-blue;
+      }
+    }
+  }
