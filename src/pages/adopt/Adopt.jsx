@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, PawPrint, Cat, Dog, Bird, Rabbit, Fish, X} from 'lucide-react';
 import AdoptionForm from './AdoptionForm';
-import './Adopt.scss';
+import './adopt.scss';
 
 const pets = [
   { id: 1, name: 'Lily', type: 'Dog', age: 3, image: './images/dog1.jpg?height=300&width=300' },
